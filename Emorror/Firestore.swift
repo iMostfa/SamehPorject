@@ -8,7 +8,7 @@
 
 import Foundation
 import Firebase
-class CustomFirebaseServices{
+class CustomFirebaseServices {
     
     static let cfs = CustomFirebaseServices()
     
@@ -32,47 +32,6 @@ class CustomFirebaseServices{
         
         
     }
-    
-    
-    
-    
-    
-    func checkCurrentUser(completion : @escaping (_ complete : Bool)->Void){
-        
-        
-        if Auth.auth().currentUser != nil {
-            // User is signed in.
-            // ...
-            completion(true)
-        } else {
-            // No user is signed in.
-            // ...
-            completion(false)
-            print("No User is signed in")
-        }
-        
-    }
-
-    func login(enteredEmail : String , enteredPassword : String , completion : @escaping (_ complete : Bool)-> Void){
-        var errorText = ""
-
-        Auth.auth().signIn(withEmail: enteredEmail, password: enteredPassword) { (authResult, error) in
-            if error != nil {
-                errorText =  error!.localizedDescription
-                print(errorText)
-                completion(false)
-                
-            }else{
-                errorText = ""
-                completion(true)
-                
-            }
-            
-            
-        }
-        
-    }
-    
     
     func reportStolenCar(){
         
