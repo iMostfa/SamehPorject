@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DetailsView.swift
 //  Emorror
 //
 //  Created by mostfa on 8/2/20.
@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DetailsView: View {
     var body: some View {
-        Text("Hello, World!")
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DetailsView()
     }
 }
